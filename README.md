@@ -1,5 +1,7 @@
 ## Instructions
 
+You can also use and customise the provided [docker-compose.yml](https://github.com/ajanvier/docker-tor-relay/blob/master/docker-compose.yml).
+
 ### Middle relay
 
 ```bash
@@ -34,14 +36,12 @@ docker run -d \
 
 ### Exit relay
 
-### Bridge relay
-
 ```bash
 docker run -d \
 	--restart always \
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
-    -e RELAY_TYPE='bridge' \
+    -e RELAY_TYPE='exit' \
 	-e RELAY_NICKNAME='mydockerrelay' \
 	-e CONTACT_NAME='Tor Admin' \
 	-e CONTACT_EMAIL='tor[at]example[dot]com' \
