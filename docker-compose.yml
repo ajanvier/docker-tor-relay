@@ -1,0 +1,20 @@
+version: '2.3'
+
+services:
+  tor-relay:
+    image: ajanvier/tor-relay
+    container_name: tor-relay
+    ports:
+      - "9001:9001"
+    restart: always
+    environment:
+      - RELAY_NICKNAME=mydockerrelay
+      - RELAY_TYPE=middle
+      - CONTACT_NAME=Tor Admin
+      - CONTACT_EMAIL=tor[at]example[dot]com
+      - CONTACT_GPG_FINGERPRINT=0xFFFFFFFF
+      - RELAY_BANDWIDTH_RATE=1 MBytes
+      - RELAY_BANDWIDTH_BURST=2 MBytes
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./tor-relay/tor:/var/lib/tor
