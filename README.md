@@ -1,3 +1,8 @@
+Docker image to setup a Tor relay
+==============================================
+![Docker Build Status](https://img.shields.io/docker/build/ajanvier/tor-relay.svg)
+![Docker Image Size](https://img.shields.io/microbadger/image-size/ajanvier/tor-relay.svg)
+
 ## Instructions
 
 You can also use and customise the provided [docker-compose.yml](https://github.com/ajanvier/docker-tor-relay/blob/master/docker-compose.yml).
